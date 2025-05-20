@@ -136,11 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e4e7bc19a567b690990135b7df6aacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 0
-  maxSP: 0
   moveSpeed: 8
-  currentHP: 0
-  currentSP: 0
 --- !u!50 &76688541
 Rigidbody2D:
   serializedVersion: 5
@@ -214,6 +210,50 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.78, y: 0.9100001}
   m_EdgeRadius: 0
+--- !u!114 &76688546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76688539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NotificationBehavior: 0
+  m_MaxPlayerCount: -1
+  m_AllowJoining: 1
+  m_JoinBehavior: 0
+  m_PlayerJoinedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_PlayerLeftEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_JoinAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 5f813324-136e-4d52-b424-2de951dbc148
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_PlayerPrefab: {fileID: 0}
+  m_SplitScreen: 0
+  m_MaintainAspectRatioInSplitScreen: 0
+  m_FixedNumberOfSplitScreens: -1
+  m_SplitScreenRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +548,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: cb65b7c2276b613da9fc4a6efb64040a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 76688540}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: cb65b7c2276b613da9fc4a6efb64040a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 76688546}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: cb65b7c2276b613da9fc4a6efb64040a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
