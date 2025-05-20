@@ -1,16 +1,15 @@
+/*
+용도: 플레이어 이동 관리
+*/
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] int maxHP; //최대 HP
-    [SerializeField] int maxSP; //최대 SP
-    [SerializeField] float moveSpeed;
+    [SerializeField] float moveSpeed; //플레이어 이동 속도
 
     private Rigidbody2D varRigidBody; //플레이어의 rigidbody2d 컴포넌트 참조
     private Animator varAnimator; //애니메이터 컴포넌트 참조를 위한 변수
     private Vector2 movementInput; //플레이어의 입력 값을 저장할 변수
-    public int currentHP; //현재 HP
-    public int currentSP; //현재 SP
     float leftRightInput; //좌우 이동값
     float upDownInput; //위아래 이동값
 
