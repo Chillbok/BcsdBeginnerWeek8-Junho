@@ -447,6 +447,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warrior_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: cb65b7c2276b613da9fc4a6efb64040a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1c158093041e49e38b166b201207dbd2, type: 2}
+    - target: {fileID: 1160356261127867848, guid: cb65b7c2276b613da9fc4a6efb64040a, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: cb65b7c2276b613da9fc4a6efb64040a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

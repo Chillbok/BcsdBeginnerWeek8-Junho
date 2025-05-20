@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed;
 
     private Rigidbody2D varRigidBody; //플레이어의 rigidbody2d 컴포넌트 참조
+    private Animator varAnimator; //애니메이터 컴포넌트 참조를 위한 변수
     private Vector2 movementInput; //플레이어의 입력 값을 저장할 변수
     public int currentHP; //현재 HP
     public int currentSP; //현재 SP
@@ -17,12 +18,17 @@ public class PlayerController : MonoBehaviour
     {
         //게임 시작 시 Rigidbody2d 컴포넌트 가져오기
         varRigidBody = GetComponent<Rigidbody2D>();
+        //게임 시작 시 Animator 컴포넌트 가져오기
+        varAnimator = GetComponent<Animator>();
     }
 
     void Update()
     {
         //프레임마다 사용자 입력 받기
         GetPlayerInput();
+        //플레이어 애니메이션과 관련된 부분은 "보이는 영역"이므로, 프레임 업데이트마다 설정해도 충분하다고 결론을 내림
+        //따라서 플레이어 애니메이션과 관련된 부분은 Update() 메서드에 선언.
+        PlayerMoveAnimationControll();
     }
 
     void FixedUpdate()
@@ -45,5 +51,27 @@ public class PlayerController : MonoBehaviour
         //이동 방향 * 이동 속도
         Vector2 targetVelocity = movementInput * moveSpeed;
         varRigidBody.linearVelocity = targetVelocity;
+    }
+
+    void PlayerMoveAnimationControll() //플레이어 이동 애니메이션 컨트롤 메서드
+    {
+        if (upDownInput != 0) //위아래로 움직임
+        {
+            varAnimator.SetBool("isMove", true);
+        }
+        else if (leftRightInput < 0) //왼쪽으로 움직임
+        {
+            varAnimator.SetBool("isMove", true);
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if (leftRightInput > 0) //오른쪽으로 움직임
+        {
+            varAnimator.SetBool("isMove", true);
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else //캐릭터가 움직이지 않는 경우
+        {
+            varAnimator.SetBool("isMove", false);
+        }
     }
 }
