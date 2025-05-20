@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D varRigidBody; //플레이어의 rigidbody2d 컴포넌트 참조
     private Animator varAnimator; //애니메이터 컴포넌트 참조를 위한 변수
+    private SpriteRenderer varSpriteRenderer; //SpriteRender 컴포넌트 참조 변수
     private Vector2 movementInput; //플레이어의 입력 값을 저장할 변수
     float leftRightInput; //좌우 이동값
     float upDownInput; //위아래 이동값
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
         varRigidBody = GetComponent<Rigidbody2D>();
         //게임 시작 시 Animator 컴포넌트 가져오기
         varAnimator = GetComponent<Animator>();
+        varSpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -54,8 +56,6 @@ public class PlayerController : MonoBehaviour
 
     void PlayerMoveAnimationControll() //플레이어 이동 애니메이션 컨트롤 메서드
     {
-        bool setAnimationLeft = GetComponent<SpriteRenderer>().flipX; //true면 좌우 반전시켜 왼쪽 보게 함
-
         if (upDownInput != 0) //위아래로 움직임
         {
             varAnimator.SetBool("isMove", true);
@@ -63,13 +63,13 @@ public class PlayerController : MonoBehaviour
         else if (leftRightInput < 0) //왼쪽으로 움직임
         {
             varAnimator.SetBool("isMove", true);
-            setAnimationLeft = true;
+            varSpriteRenderer.flipX = true;
 
         }
         else if (leftRightInput > 0) //오른쪽으로 움직임
         {
             varAnimator.SetBool("isMove", true);
-            setAnimationLeft = false;
+            varSpriteRenderer.flipX = false;
         }
         else //캐릭터가 움직이지 않는 경우
         {
