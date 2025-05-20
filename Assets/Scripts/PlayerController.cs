@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour
 
     void PlayerMoveAnimationControll() //플레이어 이동 애니메이션 컨트롤 메서드
     {
+        bool setAnimationLeft = GetComponent<SpriteRenderer>().flipX; //true면 좌우 반전시켜 왼쪽 보게 함
+
         if (upDownInput != 0) //위아래로 움직임
         {
             varAnimator.SetBool("isMove", true);
@@ -61,12 +63,13 @@ public class PlayerController : MonoBehaviour
         else if (leftRightInput < 0) //왼쪽으로 움직임
         {
             varAnimator.SetBool("isMove", true);
-            GetComponent<SpriteRenderer>().flipX = true;
+            setAnimationLeft = true;
+
         }
         else if (leftRightInput > 0) //오른쪽으로 움직임
         {
             varAnimator.SetBool("isMove", true);
-            GetComponent<SpriteRenderer>().flipX = false;
+            setAnimationLeft = false;
         }
         else //캐릭터가 움직이지 않는 경우
         {
