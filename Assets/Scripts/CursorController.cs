@@ -44,10 +44,17 @@ public class CursorController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-    void CursorLocation() //마우스 커서 위치 저장
+    void CursorLocation() //마우스 커서 위치 저장 및 업데이트
     {
-        //마우스 위치를 월드 좌표로 변환
-        mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log(mousePos);
+        if (mainCamera != null)
+        {
+            //마우스 위치를 월드 좌표로 변환
+            MousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Debug.Log(MousePosition);
+        }
+        else
+        {
+            Debug.LogError("메인 카메라 설정되지 않음");
+        }
     }
 }
