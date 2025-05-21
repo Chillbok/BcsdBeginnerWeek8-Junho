@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float moveSpeed; //플레이어 이동 속도
 
+    public Vector2 currentPlayerPosition {get; private set;} //private set으로 외부에서 값 변경은 막고, 읽기만 가능하게 설정
     private Rigidbody2D varRigidBody; //플레이어의 rigidbody2d 컴포넌트 참조
     private Animator varAnimator; //애니메이터 컴포넌트 참조를 위한 변수
     private SpriteRenderer varSpriteRenderer; //SpriteRender 컴포넌트 참조 변수
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        SetPlayerLocation(); //프레임마다 플레이어 위치 저장
         //프레임마다 사용자 입력 받기
         GetPlayerInput();
         //플레이어 애니메이션과 관련된 부분은 "보이는 영역"이므로, 프레임 업데이트마다 설정해도 충분하다고 결론을 내림
@@ -36,6 +38,11 @@ public class PlayerController : MonoBehaviour
     {
         //물리 관련 계산 및 이동 처리
         PlayerMove();
+    }
+
+    void SetPlayerLocation() //플레이어 위치 저장시키는 변수
+    {
+        currentPlayerPosition = transform.position;
     }
 
     void GetPlayerInput() //사용자 입력 받는 메서드

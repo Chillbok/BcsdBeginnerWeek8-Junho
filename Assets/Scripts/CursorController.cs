@@ -8,8 +8,9 @@ public class CursorController : MonoBehaviour
     [SerializeField] private Camera mainCamera; //메인카메라
     
     //외부에 공개할 마우스 위치 프로퍼티(읽기 전용)
-    public Vector2 MousePosition {get; private set;}
-    private Vector2 mousePos; //마우스 위치
+    public Vector2 MousePosition {get; private set;} //마우스 위치 프로퍼티
+    public PlayerController playerController; //Inspector에서 연결
+    Vector2 playerPosition; //PlayerController에서 받아온 플레이어 위치
 
     void Awake()
     {
@@ -50,7 +51,7 @@ public class CursorController : MonoBehaviour
         {
             //마우스 위치를 월드 좌표로 변환
             MousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log(MousePosition);
+            //Debug.Log(MousePosition); //마우스 위치 제대로 출력되는지 확인용
         }
         else
         {

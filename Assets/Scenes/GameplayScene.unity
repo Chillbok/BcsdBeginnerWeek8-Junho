@@ -12752,6 +12752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 519420031}
+  playerController: {fileID: 0}
 --- !u!4 &1275248130
 Transform:
   m_ObjectHideFlags: 0
@@ -12823,6 +12824,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.78, y: 0.9100001}
   m_EdgeRadius: 0
+--- !u!114 &1646953198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387380013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd8019ca3fcaa7428662064216c1f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 0
+  meleeAttackRange: 0
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1675534420
 GameObject:
   m_ObjectHideFlags: 0
@@ -15094,6 +15112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 310239314631972940, guid: c2068b43573785ab6aeb4ca7a52eca37, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 694622573353791529, guid: c2068b43573785ab6aeb4ca7a52eca37, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -15150,6 +15172,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 310239314631972940, guid: c2068b43573785ab6aeb4ca7a52eca37, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1646953197}
+    - targetCorrespondingSourceObject: {fileID: 310239314631972940, guid: c2068b43573785ab6aeb4ca7a52eca37, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1646953198}
   m_SourcePrefab: {fileID: 100100000, guid: c2068b43573785ab6aeb4ca7a52eca37, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
