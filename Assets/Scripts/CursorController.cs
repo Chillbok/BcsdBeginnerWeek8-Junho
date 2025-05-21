@@ -3,8 +3,29 @@ using UnityEngine.Rendering;
 
 public class CursorController : MonoBehaviour
 {
+    public static CursorController Instance; //static 변수로 인스턴스 선언
+
     [SerializeField] private Camera mainCamera; //메인카메라
+    
+    //외부에 공개할 마우스 위치 프로퍼티(읽기 전용)
+    public Vector2 MousePosition {get; private set;}
     private Vector2 mousePos; //마우스 위치
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            //씬이 바뀌어도 파괴되지 않게 하려면 주석 해제
+            //DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            //이미 Instance가 존재하면 중복된 이 오브젝트 파괴
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         //게임 시작 시 마우스 커서 보이기
