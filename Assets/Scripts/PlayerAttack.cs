@@ -98,8 +98,11 @@ public class PlayerAttack : MonoBehaviour
 
     void TryAttack() //공격 가능 여부 확인하는 메서드
     {
+        bool isAttacking = animator.GetCurrentAnimatorStateInfo(0).IsName("Up_Attack_2");
+        bool isAttacking2 = animator.GetCurrentAnimatorStateInfo(0).IsName("Right_Attack_2");
+        bool isAttacking3 = animator.GetCurrentAnimatorStateInfo(0).IsName("Down_Attack_2");
         //쿨타임 체크
-        if (Time.time >= lastAttackTime + attackCooldown)
+        if (!isAttacking || !isAttacking2 || !isAttacking3) //공격 애니메이션 아무것도 실행 중이 아니라면
         {
             //Debug.Log("공격 가능");
             PerformAttack();
@@ -118,11 +121,10 @@ public class PlayerAttack : MonoBehaviour
 
         //공격 도중
         AttackAnimationParameter(); //플레이어 - 마우스 각도 계산
-        animator.SetBool("StartAttack", true); //공격 애니메이션 출력
+        animator.SetTrigger("Attack");
         Debug.Log("공격 애니메이션 출력");
 
         //공격 후
-        //animator.SetBool("StartAttack", false);
         Debug.Log("공격 애니메이션 종료");
 
         varSpriteRenderer.flipX = animationFlipStatus; //플레이어 뒤집힘 여부 원래대로 돌리기
