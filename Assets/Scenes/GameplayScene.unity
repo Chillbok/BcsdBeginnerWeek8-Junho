@@ -12752,7 +12752,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 519420031}
-  playerController: {fileID: 0}
 --- !u!4 &1275248130
 Transform:
   m_ObjectHideFlags: 0
@@ -12840,7 +12839,20 @@ MonoBehaviour:
   meleeAttackRange: 0
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
+  playerController: {fileID: 1646953200}
+  cursorController: {fileID: 1275248129}
+--- !u!114 &1646953200 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1210701549608135040, guid: c2068b43573785ab6aeb4ca7a52eca37, type: 3}
+  m_PrefabInstance: {fileID: 6610365217643035862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387380013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4e7bc19a567b690990135b7df6aacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1675534420
 GameObject:
   m_ObjectHideFlags: 0
@@ -15160,6 +15172,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 9034576970229537622, guid: c2068b43573785ab6aeb4ca7a52eca37, type: 3}
+      propertyPath: m_PlayerPrefab
+      value: 
+      objectReference: {fileID: 1387380013}
     m_RemovedComponents:
     - {fileID: 6983036243722580888, guid: c2068b43573785ab6aeb4ca7a52eca37, type: 3}
     m_RemovedGameObjects:

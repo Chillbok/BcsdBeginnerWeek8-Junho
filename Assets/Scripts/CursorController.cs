@@ -9,8 +9,6 @@ public class CursorController : MonoBehaviour
     
     //외부에 공개할 마우스 위치 프로퍼티(읽기 전용)
     public Vector2 MousePosition {get; private set;} //마우스 위치 프로퍼티
-    public PlayerController playerController; //Inspector에서 연결
-    Vector2 playerPosition; //PlayerController에서 받아온 플레이어 위치
 
     void Awake()
     {
