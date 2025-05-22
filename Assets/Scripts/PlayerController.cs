@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed; //플레이어 이동 속도
 
     public Vector2 currentPlayerPosition {get; private set;} //private set으로 외부에서 값 변경은 막고, 읽기만 가능하게 설정
+    public bool animationFlip { get; set;}
     private Rigidbody2D varRigidBody; //플레이어의 rigidbody2d 컴포넌트 참조
     private Animator varAnimator; //애니메이터 컴포넌트 참조를 위한 변수
     private SpriteRenderer varSpriteRenderer; //SpriteRender 컴포넌트 참조 변수
@@ -82,5 +83,6 @@ public class PlayerController : MonoBehaviour
         {
             varAnimator.SetBool("isMove", false);
         }
+        animationFlip = varSpriteRenderer.flipX;
     }
 }
