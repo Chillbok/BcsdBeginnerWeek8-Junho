@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     void SetPlayerLocation() //플레이어 위치 저장시키는 변수
     {
-        currentPlayerPosition = this.transform.position;
+        currentPlayerPosition = transform.position;
     }
 
     void GetPlayerInput() //사용자 입력 받는 메서드
