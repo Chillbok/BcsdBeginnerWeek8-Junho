@@ -129,7 +129,7 @@ public class PlayerAttackController : MonoBehaviour
         else //오른쪽
         {
             spriteRenderer.flipX = false;
-            animator.SetFloat("AttackWay", 1f);
+            animator.SetFloat("AttackWay", 3f);
         }
     }
 }

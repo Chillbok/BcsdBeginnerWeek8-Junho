@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed; //플레이어 이동 속도
 
     public Vector2 currentPlayerPosition {get; private set;} //private set으로 외부에서 값 변경은 막고, 읽기만 가능하게 설정
+    public bool canMove = true; //이동 가능?
     public bool animationFlip { get; set;}
     private Rigidbody2D varRigidBody; //플레이어의 rigidbody2d 컴포넌트 참조
     private Animator varAnimator; //애니메이터 컴포넌트 참조를 위한 변수
@@ -48,12 +49,22 @@ public class PlayerController : MonoBehaviour
 
     void GetPlayerInput() //사용자 입력 받는 메서드
     {
-        leftRightInput = Input.GetAxisRaw("Horizontal");
-        upDownInput = Input.GetAxisRaw("Vertical");
+        if (canMove) //플레이어가 움직일 수 있는 상태라면
+        {
+            leftRightInput = Input.GetAxisRaw("Horizontal");
+            upDownInput = Input.GetAxisRaw("Vertical");
 
-        //이동 방향 벡터 저장
-        //.normalized를 사용해 대각선 이동 시 속도가 빨라지는 것 방지
-        movementInput = new Vector2(leftRightInput, upDownInput).normalized;
+            //이동 방향 벡터 저장
+            //.normalized를 사용해 대각선 이동 시 속도가 빨라지는 것 방지
+            movementInput = new Vector2(leftRightInput, upDownInput).normalized;
+        }
+        else
+        {
+            //움직임이 불가능할 때 입력을 0으로 처리해 캐릭터 멈추기
+            leftRightInput = 0;
+            upDownInput = 0;
+            movementInput = Vector2.zero;
+        }
     }
     void PlayerMove() //플레이어 이동을 구현한 메서드
     {
