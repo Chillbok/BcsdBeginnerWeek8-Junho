@@ -28,13 +28,15 @@ public class PlayerAttackController : MonoBehaviour
     private SpriteRenderer spriteRenderer; //스프라이트렌더러 컴포넌트의 참조 변수
 
     private float angle; //플레이어 - 마우스 각도
+    int playermeleeDamage; //플레이어 공격력(playerData.cs 에서 가져와야함)
 
-    Vector3 mousePosition;
-    Vector3 playerPosition;
+    Vector3 mousePosition; //마우스 위치(cursor)
+    Vector3 playerPosition; //플레이어 위치
 
     void Awake()
     {
         ResetReference(); //변수 초기화
+        playermeleeDamage = playerData.meleeAtkDamage; //playerData.cs에서 플레이어 공격력 가져오기
     }
 
     void Start()

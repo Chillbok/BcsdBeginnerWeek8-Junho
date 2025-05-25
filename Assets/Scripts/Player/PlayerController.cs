@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
     }
     void PlayerMove() //플레이어 이동을 구현한 메서드
     {
-        float moveSpeed = playerData.playerMoveSpeed;
+        float moveSpeed = playerData.playerBasicMoveSpeed;
         //이동 방향 * 이동 속도
         Vector2 targetVelocity = movementInput * moveSpeed;
         varRigidBody.linearVelocity = targetVelocity;

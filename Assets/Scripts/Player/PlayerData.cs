@@ -3,12 +3,16 @@ using UnityEngine.Rendering;
 
 public class PlayerData : MonoBehaviour
 {
+    [Header("플레이어 최대 HP")]
     [SerializeField] int maxPlayerHP;
     public int currentPlayerHP { get; set; } //플레이어 체력
 
+    [Header("플레이어 최대 스태미나")]
     [SerializeField] int maxPlayerSP;
     public int currentPlayerSP { get; set; } //플레이어 스태미나
-    [field: SerializeField] public float playerMoveSpeed { get; set; } //플레이어 이동 속도
+    [Header("플레이어 데미지")]
+    [field: SerializeField] public int meleeAtkDamage { get; set; } //플레이어 데미지
+    [field: SerializeField] public float playerBasicMoveSpeed { get; set; } //플레이어 이동 속도
 
     public bool playerIsFlip { get; set; } = false; //플레이어가 좌우로 뒤집혔는가?
     public bool playerAbleToMove { get; set; } //플레이어가 이동할 수 있는가?

@@ -6,7 +6,21 @@ using UnityEngine.AI; //적이 플레이어에게 움직이게 하기 위해 사
 public class EnemyAi : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    [SerializeField] private float moveSpeed;
+    private float moveSpeed;
+
+    //스크립트 참조변수
+    GoblinData goblinData;
+
+    void Awake()
+    {
+        ReferenceReset();
+        moveSpeed = goblinData.moveSpeed;
+    }
+
+    void ReferenceReset()
+    {
+        goblinData = GetComponent<GoblinData>();
+    }
 
     void Update()
     {
