@@ -1,6 +1,3 @@
-using NUnit.Framework.Interfaces;
-using Unity.VisualScripting;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class TorchGoblinAttackController : MonoBehaviour

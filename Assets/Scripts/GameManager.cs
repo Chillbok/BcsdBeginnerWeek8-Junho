@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     public bool isGameOver = false; //게임 오버 상태인가?
     bool isTimeStopped = false; //게임 시간이 멈췄는가?
-    bool isPaused = false; //게임 일시중지 상태인가?
+    //bool isPaused = false; //게임 일시중지 상태인가?
 
     void Awake()
     {

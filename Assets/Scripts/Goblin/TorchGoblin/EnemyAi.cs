@@ -1,7 +1,4 @@
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.AI; //적이 플레이어에게 움직이게 하기 위해 사용
 
 public class EnemyAi : MonoBehaviour
 {
