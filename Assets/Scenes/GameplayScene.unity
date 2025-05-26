@@ -8692,7 +8692,7 @@ PrefabInstance:
       objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
     - target: {fileID: 8968266389121625922, guid: 8fb840d67d6a23e45a645a3470315256, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -5569789330239419064, guid: 8fb840d67d6a23e45a645a3470315256, type: 3}
@@ -12655,6 +12655,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TorchGoblin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3224994577015084378, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419014266217694249, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8624006542005064714, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
       propertyPath: player
       value: 
@@ -12842,6 +12850,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TorchGoblin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3224994577015084378, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419014266217694249, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8624006542005064714, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
       propertyPath: player
       value: 
@@ -12933,7 +12949,7 @@ PrefabInstance:
       objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
     - target: {fileID: 8968266389121625922, guid: 8fb840d67d6a23e45a645a3470315256, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -5569789330239419064, guid: 8fb840d67d6a23e45a645a3470315256, type: 3}
@@ -13130,7 +13146,7 @@ PrefabInstance:
       objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
     - target: {fileID: 8968266389121625922, guid: 8fb840d67d6a23e45a645a3470315256, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -5569789330239419064, guid: 8fb840d67d6a23e45a645a3470315256, type: 3}
@@ -13674,7 +13690,7 @@ PrefabInstance:
       objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
     - target: {fileID: 8968266389121625922, guid: 8fb840d67d6a23e45a645a3470315256, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -5569789330239419064, guid: 8fb840d67d6a23e45a645a3470315256, type: 3}
@@ -16311,6 +16327,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TorchGoblin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3224994577015084378, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419014266217694249, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8624006542005064714, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
       propertyPath: player
       value: 
@@ -16689,6 +16713,14 @@ PrefabInstance:
     - target: {fileID: 862985889228178341, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
       propertyPath: m_Name
       value: TorchGoblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 3224994577015084378, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419014266217694249, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8624006542005064714, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
       propertyPath: player
