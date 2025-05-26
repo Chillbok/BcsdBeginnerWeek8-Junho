@@ -41,6 +41,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         SeePlayerHP(); //플레이어 HP 점검하고 게임오버 판정
+        if (Input.GetKeyDown(KeyCode.Escape)) //ESC 입력하면 게임 종료
+        {
+            ExitGame();
+        }
     }
 
     public void StopTime() //시간 멈추는 메서드
@@ -78,5 +82,13 @@ public class GameManager : MonoBehaviour
         {
             GameOver();
         }
+    }
+
+    void ExitGame() //게임 종료
+    {
+        Application.Quit(); //빌드된 게임에서는 애플리케이션 종료
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }
