@@ -13296,7 +13296,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -10, y: -10}
-  m_SizeDelta: {x: 300, y: 50}
+  m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &910520283
 MonoBehaviour:
@@ -13318,7 +13318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press ESC To Exit Game
+  m_text: Press ALT + F4 To Exit Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16717,10 +16717,6 @@ PrefabInstance:
     - target: {fileID: 3224994577015084378, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6419014266217694249, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8624006542005064714, guid: 0eb0d95282ae6e24cb56dacb2e6764c0, type: 3}
       propertyPath: player

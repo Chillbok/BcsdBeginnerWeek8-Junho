@@ -70,7 +70,7 @@ public class GoblinData : MonoBehaviour
 
         if (isDead)
         {
-            Destroy(gameObject, 1f); //1초 뒤 오브젝트 파괴
+            Destroy(gameObject, 0.2f); //1초 뒤 오브젝트 파괴
         }
     }
 
