@@ -6,9 +6,9 @@ public class CursorController : MonoBehaviour
     public static CursorController Instance; //static 변수로 인스턴스 선언
 
     [SerializeField] private Camera mainCamera; //메인카메라
-    
+
     //외부에 공개할 마우스 위치 프로퍼티(읽기 전용)
-    public Vector2 MousePosition {get; private set;} //마우스 위치 프로퍼티
+    public Vector2 MousePosition { get; private set; } //마우스 위치 프로퍼티
 
     void Awake()
     {
