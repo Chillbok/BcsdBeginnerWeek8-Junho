@@ -1,17 +1,24 @@
+using System;
 using UnityEngine;
 
 public class GoblinData : MonoBehaviour
 {
+    [Header("공격력")]
     [SerializeField] public int damage; //데미지
 
-    [Header("최대 HP")]
+    [Header("HP")]
     [SerializeField] int maxGoblinHP; //최대 고블린 체력
     public int currentHp { get; set; } //현재 고블린 체력
+
+    [Header("움직이는 속도")]
     [field: SerializeField] public float moveSpeed { get; set; } //움직이는 속도
-    [SerializeField] public float seeRange; //플레이어 인지 거리
+
+    [Header("거리 관련 변수")]
+    [SerializeField] float seeRange; //플레이어 인지 거리
+    [SerializeField] GameObject objectSeeRange; //플레이어 인지 거리 확인용 오브젝트
     GameObject Target; //공격 목표
     [SerializeField] GameObject Player; //플레이어 게임 오브젝트
-    [SerializeField] GameObject WayPoint; //플레이어
+    [SerializeField] GameObject WayPoint; //고블린 웨이포인트
     
     //고블린 상태 변수
     bool isDead = false; //죽었는가?
@@ -34,6 +41,12 @@ public class GoblinData : MonoBehaviour
     {
         currentHp = maxGoblinHP; //기초 HP 설정
         Target = WayPoint; //기본 공격 목표 설정
+        SetGoblinRange(seeRange);
+    }
+
+    void SetGoblinRange(float seeRange)
+    {
+        objectSeeRange.transform.localScale = new Vector3(seeRange, seeRange, 1.0f);
     }
 
     void Update()
